@@ -1,7 +1,7 @@
 def ft_filter(funct, iter) -> any:
-	if funct is None:
-		return [x for x in iter if x]
-	return [x for x in iter if funct(x)]
+    if funct is None:
+        return [x for x in iter if x]
+    return [x for x in iter if funct(x)]
 
 # def test_even(object: any) -> bool:
 # 	if object % 2:
