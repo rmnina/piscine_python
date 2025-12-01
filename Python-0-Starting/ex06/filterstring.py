@@ -11,9 +11,19 @@ def main():
         print(f"AssertionError: {error}")
         return
 
+    try:
+        assert not [x for x in args[1] if not x.isalpha() and not x == " "], \
+            "Bad argument (argv[1])"
+        assert not [x for x in args[2] if not x.isdigit()], \
+            "Bad argument (argv[2])"
+    except AssertionError as error:
+        print(f"Assertion error: {error}")
+        return
+
     stringTab = args[1].split(" ")
 
     result = ft_filter(lambda x: len(x) > int(args[2]), stringTab)
+
     print(f"{result}")
 
 
