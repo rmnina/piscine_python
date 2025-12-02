@@ -4,10 +4,10 @@ from tqdm import tqdm
 
 
 def main():
-    for elem in ft_tqdm(range(100)):
+    for elem in ft_tqdm(range(333)):
         sleep(0.005)
     print()
-    for elem in tqdm(range(100)):
+    for elem in tqdm(range(333)):
         sleep(0.005)
     print()
 

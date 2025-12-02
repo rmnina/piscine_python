@@ -5,7 +5,7 @@ ESC = '\x1b'
 RESET = ESC + "[0m"
 GREEN = 94
 BLUE = 99
-OFFSET = 39
+OFFSET = 40
 BAR_OFFSET = 4
 BLOC = '▓'
 
