@@ -1,0 +1,19 @@
+[project]
+name = "ft_package"
+version = "0.0.1"
+authors = [
+    {name = "rmnina", email = "rmnina@student.42.fr"},
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
+
+[project.urls]
+Homepage = "https://github.com/rmnina/piscine_python/Python-0-Starting/ex09"
+Issues = "https://github.com/rmnina/piscine_python/Python-0-Starting/ex09/issues"
