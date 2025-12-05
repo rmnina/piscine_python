@@ -1,7 +1,7 @@
 import sys
 
 
-def morseTranslate(arg: str) -> any:
+def morseTranslate(arg: str) -> str:
     morsecode = {
         " ": "/",
         "A": ".-",
@@ -35,10 +35,7 @@ def morseTranslate(arg: str) -> any:
     res = ""
 
     for x in arg.upper():
-        if x.isalpha() or x == " ":
-            res += morsecode[x] + " "
-        else:
-            return None
+        res += morsecode[x] + " "
 
     return str(res)
 
@@ -48,19 +45,13 @@ def main():
 
     try:
         assert len(args) == 2, "One expected argument"
+        assert not [x for x in args[1] if not x.isalpha() and not x == " "], \
+            "Bad character in string"
     except AssertionError as error:
         print(f"AssertionError: {error}")
         return
 
-    res = morseTranslate(args[1])
-
-    try:
-        assert res, "Bad character in string"
-    except AssertionError as error:
-        print(f"AssertionError: {error}")
-        return
-
-    print(res)
+    print(morseTranslate(args[1]))
 
 
 if __name__ == "__main__":
